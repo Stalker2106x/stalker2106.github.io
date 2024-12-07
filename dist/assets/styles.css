@@ -1,0 +1,52 @@
+body {
+	height: 100%;
+	background-color: 21232c;
+	background-attachment: fixed;
+	font-family: "Fira Code", sans-serif;
+	font-weight: 500;
+}
+
+p {
+    color: #9CA3AF;
+}
+
+h1, h2, h3, h4 {
+    margin:0;
+	color: #21E762;
+}
+
+a {
+	color: #FF0080;
+  	text-decoration: none;
+}
+
+a:link {
+	color: #FF0080;
+}
+
+nav {
+    margin-bottom: 50px;
+}
+
+.post-date {
+    font-style: italic;
+    color: #cbd5e6;
+	font-weight: 500;
+}
+
+.app {
+
+}
+
+.footer {
+    margin-top: 100px;
+    font-size: 10pt;
+    color: #44484e;
+    font-style: italic;
+	font-weight: 200;
+}
+
+.main-container {
+    margin: auto;
+    max-width: 1024px;
+}

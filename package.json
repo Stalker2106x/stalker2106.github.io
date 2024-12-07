@@ -1,0 +1,12 @@
+{
+  "name": "OpenRomu_Website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Stalker2106 <contact@maximemartens.fr>",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  }
+}

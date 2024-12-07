@@ -1,0 +1,28 @@
+<html>
+    <head>    
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVL7SKH3BH"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HVL7SKH3BH');
+        </script>
+        <title>Stalker2106 Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="./assets/portfolio.ico">
+        <link rel="stylesheet" href="./assets/styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Fira Code' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="app">
+            <!-- MAIN CONTAINER -->
+            <div class="main-container">
+                {{navigation | safe}}
+                <!-- PAGE CONTENT -->
+                <div id="content">{{pageContent|safe}}</div>
+            </div>
+        </div>
+        <div class="footer">crafted with <3 - Stalker2106</div>
+    </body>
+</html>
