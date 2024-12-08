@@ -4,11 +4,16 @@ You’ve stumbled across my little corner of the web, where I’ve gathered all 
 Feel free to explore and take a glimpse into my journey as a maker, tinkerer, and lifelong learner.<br />
 Thanks for stopping by!
 </p>
+<div>
+    {% for tag in tags %}
+    <a class="tag">{{tag.name}}<span>{{tag.count}}</span></a>
+    {% endfor %}
+</div>
 <div style="height: 50px;"></div>
 {% for post in posts %}
 <div class="post-entry">
     <h2>{{post.title}}</h2>
-    <h4 class="post-date">{{post.date}}</h4>
+    <h4 class="post-date">{{post.date}} • {% for tag in post.tags %} {{tag}} {% endfor %}</h4>
     <div>{{post.content | safe}}</div>
 </div>
 {% endfor %}

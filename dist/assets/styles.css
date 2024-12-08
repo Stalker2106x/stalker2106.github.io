@@ -71,6 +71,19 @@ nav {
     }
 }
 
+.tag {
+    display: inline;
+    background-color: #9CA3AF;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    span {
+        background-color: #FFA3AF;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
 
 .app {
 

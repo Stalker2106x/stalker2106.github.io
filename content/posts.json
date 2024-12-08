@@ -2,13 +2,13 @@
     {
         "title": "The day I decided to create this space",
         "date": "07/12/2024",
-        "tags": [],
+        "tags": ["stories"],
         "contentid": "post01"
     },
     {
         "title": "Learning programming as a teenager... with C++ and cyphering",
         "date": "07/12/2024",
-        "tags": ["project"],
+        "tags": ["stories", "project", "c++"],
         "contentid": "encryptor"
     }
 ]
