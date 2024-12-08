@@ -4,11 +4,28 @@ You’ve stumbled across my little corner of the web, where I’ve gathered all 
 Feel free to explore and take a glimpse into my journey as a maker, tinkerer, and lifelong learner.<br />
 Thanks for stopping by!
 </p>
+<h4>Tags</h4>
+<div>
+    {% for tag in tags %}
+    <a class="tag" href="tag-{{tag.name}}.html">{{tag.name}}</a><span class="tag-count">{{tag.count}}</span>
+    {% endfor %}
+</div>
 <div style="height: 50px;"></div>
 {% for post in posts %}
 <div class="post-entry">
     <h2>{{post.title}}</h2>
-    <h4 class="post-date">{{post.date}}</h4>
+    <h4 class="post-date">{{post.date}} • {% for tag in post.tags %} {{tag}} {% endfor %}</h4>
     <div>{{post.content | safe}}</div>
 </div>
 {% endfor %}
+<div class="page-nav">
+    {% if pageNumber > 1 %}
+    <a href="index-{{pageNumber-1}}.html">&lt;</a>
+    {% elif pageNumber == 1 %}
+    <a href="index.html">&lt;</a>
+    {% endif %}
+    <p>{{pageNumber}}</p>
+    {% if pageNumber < pageCount-1 %}
+    <a href="index-{{pageNumber+1}}.html">&gt;</a>
+    {% endif %} 
+</div>

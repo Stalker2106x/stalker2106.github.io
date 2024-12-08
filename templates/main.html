@@ -29,7 +29,7 @@
         <div id="image-popup" class="image-popup" style="visibility: hidden;">
             <img class="image-popup-close" onclick="closeImagePopup()" src="assets/close.png" />
             <div class="image-popup-container" onclick="closeImagePopup()">
-                <div id="image-popup-img" onclick="event.stopPropagation()"></div>
+                <img id="image-popup-img" onclick="event.stopPropagation()">
                 <p id="image-popup-caption"></p>
             </div>
         </div>
@@ -45,7 +45,7 @@
             const popupImg = document.getElementById("image-popup-img")
             const popupCaption = document.getElementById("image-popup-caption")
             const img = event.target
-            popupImg.style.backgroundImage = `url('${img.src}')`
+            popupImg.src = img.src
             popupCaption.innerText = img.nextElementSibling.innerText
             popup.style.visibility = 'visible'
         }

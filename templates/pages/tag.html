@@ -1,0 +1,9 @@
+<h3>All {{tagName}} posts</h3>
+<div style="height: 50px;"></div>
+{% for post in posts %}
+<div class="post-entry">
+    <h2>{{post.title}}</h2>
+    <h4 class="post-date">{{post.date}} • {% for tag in post.tags %} {{tag}} {% endfor %}</h4>
+    <div>{{post.content | safe}}</div>
+</div>
+{% endfor %}
