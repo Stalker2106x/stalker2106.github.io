@@ -58,30 +58,55 @@ nav {
 }
 
 .image-popup-container {
+    width: auto; /* Allows scaling based on height */
+    height: 100%; /* Takes up to 60% of the viewport height */
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
 
     #image-popup-img {
-        width: 80%;
-        height: 60%;
-        background-repeat: no-repeat;
-        background-position: center; 
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain; 
     }
 }
 
 .tag {
     display: inline;
+    color:#000000;
     background-color: #9CA3AF;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+.tag-count {
+    display: inline;
+    background-color: #b9c1cf;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding-left: 5px;
     padding-right: 5px;
+}
 
-    span {
-        background-color: #FFA3AF;
-        padding-left: 5px;
-        padding-right: 5px;
+.page-nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+
+    a {
+        color: #ffffff;
+    }
+
+    p {
+        color: #21E762;
+        margin: 0;
     }
 }
 
@@ -131,7 +156,8 @@ nav {
     }
 
     p {
-        margin: 0;
+        margin-top: 5px;
+        text-align: center;
         font-size: 10pt;
         color: #cbd5e6;
     }
