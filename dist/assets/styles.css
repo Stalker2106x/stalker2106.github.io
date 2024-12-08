@@ -1,6 +1,7 @@
 body {
+    margin: 0;
 	height: 100%;
-	background-color: 21232c;
+	background-color: #21232c;
 	background-attachment: fixed;
 	font-family: "Fira Code", sans-serif;
 	font-weight: 500;
@@ -8,6 +9,14 @@ body {
 
 p {
     color: #9CA3AF;
+
+    a {
+        color: #FF0080;
+    }
+    
+    a:link {
+        color: #FF0080;
+    }
 }
 
 h1, h2, h3, h4 {
@@ -15,24 +24,53 @@ h1, h2, h3, h4 {
 	color: #21E762;
 }
 
-a {
-	color: #FF0080;
-  	text-decoration: none;
-}
 
-a:link {
-	color: #FF0080;
-}
 
 nav {
     margin-bottom: 50px;
+
+    a {
+        color: #ffffff;
+        font-size: 16pt;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    a:link {
+        color: #ffffff;
+    }
+
+    a:not(:first-child) {
+        border-left: 1px solid #ffffff;
+    }
 }
 
-.post-date {
-    font-style: italic;
-    color: #cbd5e6;
-	font-weight: 500;
+.image-popup {
+	background-color: #000000e0;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
 }
+
+.image-popup-close {
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.image-popup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    #image-popup-img {
+        width: 80%;
+        height: 60%;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+}
+
 
 .app {
 
@@ -46,7 +84,170 @@ nav {
 	font-weight: 200;
 }
 
+/*
+ * Posts
+ */
+
 .main-container {
     margin: auto;
     max-width: 1024px;
 }
+
+.post-date {
+    font-style: italic;
+    color: #cbd5e6;
+	font-weight: 500;
+}
+
+.post-content {
+    text-align: justify;
+}
+
+.post-image {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+        cursor: zoom-in;
+        margin: auto;
+        border: solid 1px #ffffff;
+    }
+
+    p {
+        margin: 0;
+        font-size: 10pt;
+        color: #cbd5e6;
+    }
+}
+
+/*
+ * Timeline
+ */
+
+
+/* Timeline Container */
+.timeline {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Card container */
+.card {
+    position: relative;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+
+.card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+
+/* Global ::before */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid #21E762;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media only screen and (max-width: 400px) {
+.card:nth-child(odd)::before {
+    top: -5px;
+    bottom: -5px;
+}
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* Title of the card */
+.project-title {
+    color: #21E762;
+    position: relative;
+}
+
+.project-date {
+    color: #cbd5e6;
+    position: relative;
+}
+
+/* Timeline dot  */
+.project-title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid #21E762;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .project-title {
+    text-align: right;
+}
+
+.card:nth-child(even) > .info > .project-date {
+    text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .project-title::before {
+    left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .project-title::before {
+    right: -45px;
+}
+  

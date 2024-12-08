@@ -1,0 +1,18 @@
+<h3>Projects timeline</h3>
+<p>
+Here are all the projects I worked on.
+</p>
+<div style="height: 50px;"></div>
+<div class="timeline">
+    <div class="outer">
+    {% for project in projects %}
+    <div class="card">
+      <div class="info">
+        <h3 class="project-title">{{project.name}}</h3>
+        <h4 class="project-date">{{project.date}}</h4>
+        <p>{{project.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>

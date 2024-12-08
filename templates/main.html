@@ -20,9 +20,39 @@
             <div class="main-container">
                 {{navigation | safe}}
                 <!-- PAGE CONTENT -->
-                <div id="content">{{pageContent|safe}}</div>
+                <div id="content">
+                    {{pageContent|safe}}
+                </div>
             </div>
         </div>
-        <div class="footer">crafted with <3 - Stalker2106</div>
+        <div class="footer">crafted with &#60;3 - Stalker2106</div>
+        <div id="image-popup" class="image-popup" style="visibility: hidden;">
+            <img class="image-popup-close" onclick="closeImagePopup()" src="assets/close.png" />
+            <div class="image-popup-container" onclick="closeImagePopup()">
+                <div id="image-popup-img" onclick="event.stopPropagation()"></div>
+                <p id="image-popup-caption"></p>
+            </div>
+        </div>
     </body>
+    <script>
+        const closeImagePopup = function () {
+            const popup = document.getElementById("image-popup")
+            popup.style.visibility = 'hidden'
+        }
+
+        const openImagePopup = function(event) {
+            const popup = document.getElementById("image-popup")
+            const popupImg = document.getElementById("image-popup-img")
+            const popupCaption = document.getElementById("image-popup-caption")
+            const img = event.target
+            popupImg.style.backgroundImage = `url('${img.src}')`
+            popupCaption.innerText = img.nextElementSibling.innerText
+            popup.style.visibility = 'visible'
+        }
+
+        const postsImages = document.getElementsByClassName("post-image")
+        for (const img of postsImages) {
+            img.addEventListener('click', openImagePopup, false);
+        }
+    </script>
 </html>
