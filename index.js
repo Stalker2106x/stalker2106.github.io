@@ -16,7 +16,7 @@ function injectPostsContent(posts) {
     const filledPosts = []
     for (const postData of posts) {
         const postContentPath = `${PostsContentPath}/${postData.contentid}`
-        const postContent = nunjucks.render(`${postContentPath}/index.html`, { contentPath: `../${postContentPath}` })
+        const postContent = nunjucks.render(`${OutputPath}/${postContentPath}/index.html`, { contentPath: `${postContentPath}` })
         filledPosts.push({
             ...postData,
             content: postContent

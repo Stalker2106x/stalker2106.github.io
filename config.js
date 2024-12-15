@@ -1,7 +1,7 @@
 const ContentPath = 'content'
 const OutputPath = 'dist'
 const TemplatesPath = 'templates'
-const PostsContentPath =`${OutputPath}/posts_content`
+const PostsContentPath ='posts_content'
 
 module.exports = {
   PostsPerPage: 10,
