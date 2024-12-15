@@ -137,6 +137,10 @@ nav {
 	font-weight: 500;
 }
 
+.post-entry {
+    margin-bottom: 50px;
+}
+
 .post-content {
     text-align: justify;
 }
