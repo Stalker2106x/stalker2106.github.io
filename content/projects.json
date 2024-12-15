@@ -1,5 +1,15 @@
 [
     {
+        "date": "08/2020",
+        "name": "Lambdash",
+        "description": "UNIX Bash-like shell written in Rust. This shell was made for educational purposes, and as the main entrypoint to learn rust with a project."
+    },
+    {
+        "date": "08/2020",
+        "name": "wad3-cli",
+        "description": "Very basic CLI written in C# using Sledge C# Libraries that allows for easy unpacking/packing of textures from/into a GoldSrc WAD3 file."
+    },
+    {
         "date": "02/2024",
         "name": "OpenRomu",
         "description": "OpenRomu is a 3D Multiplayer FPS developed in GDScript on Godot Engine. It is a modern revival of the classic french game RomuStrike, designed to bring the nostalgic experience of the original to life for its dedicated community of players. The project aims to reconnect old players and provide a platform for them to continue enjoying their beloved childhood game."
@@ -20,6 +30,11 @@
         "description": "Black Mesa Rising is a React-based browser game developed in JavaScript, set within the Half-Life universe and inspired by the classic space strategy game Ogame. Players manage resources, build their bases, and expand their influence across the game world in a competitive, strategy-driven environment."
     },
     {
+        "date": "04/2022",
+        "name": "RaceDriver:Origins",
+        "description": "Racedriver: Origins is a reboot of the original Racedriver game, developed in Godot with GDScript. It features pixel art graphics and replaces random race outcomes with Quick-Time Events (QTEs), focusing on player skill and timing while retaining the original concept."
+    },
+    {
         "date": "11/2021",
         "name": "GoldImporter",
         "description": "GoldImporter is a Blender addon written in Python, that allows to import GoldSrc (Half-Life) BSP maps into blender. It provides multiple import flags such as importing entities, lights, and stitching imported maps together."
@@ -35,6 +50,11 @@
         "description": "MiniXBVM is a Graphical Virtual Machine emulating a SAP-X Microcomputer architecture written in C++. Binary includes a feature-rich IDE for SAP-X assembler and a compiler. Dynamic register/memory watches and step by step execution for better understanding of code flow."
     },
     {
+        "date": "08/2020",
+        "name": "Reef Rumble",
+        "description": "Reef Rumble is an 2D arcade brawler game built with GDScript in the Godot Engine. In this underwater arena, you embody a nimble jellyfish locked in battles with other players. The core mechanic revolves around using your jellyfish's dash ability to knock an urchin around the arena—whether to outmaneuver opponents or to strategically avoid disaster."
+    },
+    {
         "date": "05/2020",
         "name": "HoldTheCorridor (Furnace)",
         "description": "Furnace is a 3D survival game developed in C# with Unity. You battle waves of zombies in a dark, confined space. Your only source of light is a central campfire that requires wood, gathered from defeated zombies to stay lit. If the fire goes out, visibility drops, leaving you unable to fight effectively. Between waves, a seller offers weapon upgrades."
@@ -48,6 +68,11 @@
         "date": "04/2018",
         "name": "Vault",
         "description": "Vault is a pure vanillaJS + PHP landing page made for home servers. It displays an application grid similar to a smartphone homescreen layout, having each tile routed to a service you use, or used as a note. It uses a CMS-approach, where zero knowledge is needed either to use it, or to deploy it."
+    },
+    {
+        "date": "02/2018",
+        "name": "TinyConf",
+        "description": "TinyConf is a C++ header only library that provides a serializer/deserializer and parser for INI-like configuration files. It extends the INI featureset by adding support for comments, multiple values per key, and other interesting features such as syntax customization."  
     },
     {
         "date": "04/2017",
